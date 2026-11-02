@@ -90,7 +90,7 @@ market_values = np.array(closing_prices)
 model = Ridge(alpha=0.1)  # Adjust alpha for more or less regularization
 
 # Create higher degree polynomial features
-poly_features = PolynomialFeatures(degree=10)
+poly_features = PolynomialFeatures(degree=7)
 Days_passed_poly = poly_features.fit_transform(Days_passed)
 
 # Use cross-validation to estimate performance
